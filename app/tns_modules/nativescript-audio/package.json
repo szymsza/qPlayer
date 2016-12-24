@@ -1,0 +1,126 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "nativescript-audio",
+        "scope": null,
+        "escapedName": "nativescript-audio",
+        "name": "nativescript-audio",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "G:\\Dokumenty\\Kuxa\\Android\\Native Script\\qPlayer"
+    ]
+  ],
+  "_from": "nativescript-audio@latest",
+  "_id": "nativescript-audio@2.1.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/nativescript-audio",
+  "_nodeVersion": "5.7.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/nativescript-audio-2.1.3.tgz_1478221434373_0.1480051102116704"
+  },
+  "_npmUser": {
+    "name": "bradmartin",
+    "email": "bradmartin0905@gmail.com"
+  },
+  "_npmVersion": "3.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "nativescript-audio",
+    "scope": null,
+    "escapedName": "nativescript-audio",
+    "name": "nativescript-audio",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-audio/-/nativescript-audio-2.1.3.tgz",
+  "_shasum": "4d52d5edd122de45991f739c5a40f6873fcea303",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-audio",
+  "_where": "G:\\Dokumenty\\Kuxa\\Android\\Native Script\\qPlayer",
+  "author": {
+    "name": "Brad Martin",
+    "email": "bradwaynemartin@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/bradmartin/nativescript-audio/issues"
+  },
+  "contributors": [
+    {
+      "name": "Nathan Walker",
+      "email": " walkerrunpdx@gmail.com",
+      "url": "https://github.com/NathanWalker"
+    }
+  ],
+  "dependencies": {},
+  "description": "NativeScript plugin to record and play audio.",
+  "devDependencies": {
+    "tns-platform-declarations": "^2.3.0",
+    "typescript": "^1.8.10"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "4d52d5edd122de45991f739c5a40f6873fcea303",
+    "tarball": "https://registry.npmjs.org/nativescript-audio/-/nativescript-audio-2.1.3.tgz"
+  },
+  "gitHead": "c6afc4e8574e6c351d65eb7acad4e019658c3fc3",
+  "homepage": "https://github.com/bradmartin/nativescript-audio",
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "TypeScript",
+    "Android",
+    "iOS",
+    "music",
+    "microphone",
+    "recorder",
+    "audio",
+    "bradmartin",
+    "nathanwalker"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/bradmartin/nativescript-audio/blob/master/LICENSE"
+  },
+  "main": "audio.js",
+  "maintainers": [
+    {
+      "name": "bradmartin",
+      "email": "bradmartin0905@gmail.com"
+    },
+    {
+      "name": "walkerrunpdx",
+      "email": "walkerrunpdx@gmail.com"
+    }
+  ],
+  "name": "nativescript-audio",
+  "nativescript": {
+    "platforms": {
+      "android": "2.3.0",
+      "ios": "2.3.0"
+    }
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradmartin/nativescript-audio.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "demo.android": "npm run preparedemo; cd demo; tns emulate android",
+    "demo.ios": "npm run preparedemo; cd demo; tns emulate ios",
+    "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-audio; tns plugin add ..; tns install",
+    "setup": "cd demo; npm i; cd ..; npm i; npm run build; cd demo; tns plugin add ..; cd .."
+  },
+  "typings": "index.d.ts",
+  "version": "2.1.3"
+}

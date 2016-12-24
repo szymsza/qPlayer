@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "G:\\Dokumenty\\Kuxa\\Android\\Native Script\\qPlayer\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "G:\\Dokumenty\\Kuxa\\Android\\Native Script\\qPlayer\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "G:\\Dokumenty\\Kuxa\\Android\\Native Script\\qPlayer\\platforms\\android\\build\\intermediates\\res\\merged\\F0\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "G:\\Dokumenty\\Kuxa\\Android\\Native Script\\qPlayer\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
+    }
+]
