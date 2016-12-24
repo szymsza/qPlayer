@@ -19,14 +19,15 @@ https://docs.nativescript.org/ui/components.
     <ActionBar title="Vyberte písně">
       <NavigationButton text="Zpět" android.systemIcon="ic_menu_back" tap="{{ goBack }}"/>
       <ActionItem tap="onDelete"
-        android.systemIcon="ic_media_pause" ios.position="right"
-        text="Ok" android.position="actionBar" tap="{{ okay }}"/> 
+        android.systemIcon="btn_check_buttonless_on" ios.position="right"
+        text="Ok" android.position="actionBar" tap="{{ okay }}"/>
     </ActionBar>
     <GridLayout>
       <ListView items="{{ groceryList }}" itemTap="{{ onTap }}">
         <ListView.itemTemplate>
-          <Label text="{{ name }}" horizontalAlignment="left" class="fa" verticalAlignment="center"/>
+          <Label text="{{ icon + name }}" horizontalAlignment="left" class="fa" verticalAlignment="center"/>
         </ListView.itemTemplate>
       </ListView>
+      <Label text="{{ qLengthBanner }}" horizontalAlignment="left" class="bottom-banner" verticalAlignment="bottom"/>
     </GridLayout>
 </Page>

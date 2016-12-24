@@ -1,0 +1,13 @@
+.bottom-banner {
+  background-color: black;
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 0;
+  font-size: 17;
+  padding: 12 0 12 20;
+}
+
+Page ListView {
+  margin-bottom: 47;
+}

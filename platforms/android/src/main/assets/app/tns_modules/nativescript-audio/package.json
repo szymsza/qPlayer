@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "nativescript-audio@^2.1.3",
+        "raw": "nativescript-audio",
         "scope": null,
         "escapedName": "nativescript-audio",
         "name": "nativescript-audio",
-        "rawSpec": "^2.1.3",
-        "spec": ">=2.1.3 <3.0.0",
-        "type": "range"
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
       },
       "G:\\Dokumenty\\Kuxa\\Android\\Native Script\\qPlayer"
     ]
   ],
-  "_from": "nativescript-audio@>=2.1.3 <3.0.0",
+  "_from": "nativescript-audio@latest",
   "_id": "nativescript-audio@2.1.3",
   "_inCache": true,
   "_installable": true,
@@ -30,22 +30,21 @@
   "_npmVersion": "3.6.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "nativescript-audio@^2.1.3",
+    "raw": "nativescript-audio",
     "scope": null,
     "escapedName": "nativescript-audio",
     "name": "nativescript-audio",
-    "rawSpec": "^2.1.3",
-    "spec": ">=2.1.3 <3.0.0",
-    "type": "range"
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
   },
   "_requiredBy": [
-    "#USER",
-    "/"
+    "#USER"
   ],
   "_resolved": "https://registry.npmjs.org/nativescript-audio/-/nativescript-audio-2.1.3.tgz",
   "_shasum": "4d52d5edd122de45991f739c5a40f6873fcea303",
   "_shrinkwrap": null,
-  "_spec": "nativescript-audio@^2.1.3",
+  "_spec": "nativescript-audio",
   "_where": "G:\\Dokumenty\\Kuxa\\Android\\Native Script\\qPlayer",
   "author": {
     "name": "Brad Martin",

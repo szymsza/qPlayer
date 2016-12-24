@@ -3,6 +3,7 @@
     "nativescript-master-technology": true,
     "nativescript-theme-core": true,
     "nativescript-toast": true,
+    "nativescript-toolbar": true,
     "tns-core-modules": true,
     "tns-core-modules-widgets": true
 }
