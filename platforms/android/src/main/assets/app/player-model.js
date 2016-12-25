@@ -14,6 +14,7 @@ require( "nativescript-master-technology" );
 
 // Array of queued files
 var queue = [];
+var qArray = new ObservableArray([]);
 
 
 
@@ -29,17 +30,28 @@ function nbsp(x) {
 }
 
 
-function play(id) {
+function play(id, viewModel) {
     var song = queue[id];
+
+    // Change song icon to play
+    queue[id].icon = String.fromCharCode(0xf04b)+nbsp(2);
+    qArray.setItem(id, queue[id]);
+    viewModel.set("groceryList", qArray);
+
     player.playFromFile({
         audioFile: song.path,
         loop: false,
         completeCallback: function() {
             var nextSong = id+1;
-            if (typeof queue[nextSong] == "undefined")
+            if (typeof queue[nextSong] == "undefined") // no song left - exit app
                 process.exit()
             else
-                play(nextSong);
+                play(nextSong, viewModel);
+
+            // Change song icon to tick
+            queue[id].icon = String.fromCharCode(0xf00c)+nbsp(2);
+            qArray.setItem(id, queue[id]);
+            viewModel.set("groceryList", qArray);
         },
 
         errorCallback: function() {
@@ -52,39 +64,38 @@ function play(id) {
 function createViewModel(q) {
     var viewModel = new Observable();
 
-    var qArray = new ObservableArray([]);
-
     for (var id in q) {
         var song = q[id];
         var file = fs.File.fromPath(song);
         var object = {
             name: file.name,
-            path: song
+            path: song,
+            icon: String.fromCharCode(0xf04c)+nbsp(2) // Pause icon
         };
 
         qArray.push(object);
         queue.push(object);
     }
 
-    play(0);
+    // Start first song
+    if (!player.isAudioPlaying()) {
+        play(0, viewModel);
+        viewModel.set("showIcon", "pause");
+    } else
+        viewModel.set("showIcon", "play");
 
     viewModel.set("groceryList", qArray);
 
     /**
-     * Item was tapped
+     * pause or play song
      */
-    viewModel.onTap = function(e) {
-        var item = viewModel.groceryList.getItem(e.index);
-        var path = item.path;
-
-        if (path) {
-            // Not a file
-            if (item.type != "file")
-                return false;
-
-            this.set("groceryList", loadFolder(currentFolder)); // rerender view (because of checkboxes)
-            /*
-            */
+    viewModel.pauseplay = function(e) {
+        if (player.isAudioPlaying()) { // song is playing - stop and change icon to play
+            player.pause();
+            viewModel.set("showIcon", "play");
+        } else {  // song is not playing - start and change icon to pause
+            player.resume();
+            viewModel.set("showIcon", "pause");
         }
     }
 

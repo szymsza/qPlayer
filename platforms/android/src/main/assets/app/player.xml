@@ -18,13 +18,22 @@ https://docs.nativescript.org/ui/components.
     -->
     <ActionBar title="Player">
       <NavigationButton text="Zpět" android.systemIcon="ic_menu_back" tap="{{ goBack }}"/>
+
+      <ActionItem
+        android.systemIcon="ic_media_pause" ios.position="right"
+        text="PAUSE" android.position="actionBar" tap="{{ pauseplay }}"
+        visibility="{{ showIcon == 'pause' ? 'visible' : 'collapsed' }}"/>
+
+      <ActionItem
+        android.systemIcon="ic_media_play" ios.position="right"
+        text="PLAY" android.position="actionBar" tap="{{ pauseplay }}"
+        visibility="{{ showIcon == 'play' ? 'visible' : 'collapsed' }}"/>
     </ActionBar>
     <GridLayout>
-      <ListView items="{{ groceryList }}" itemTap="{{ onTap }}">
+      <ListView items="{{ groceryList }}">
         <ListView.itemTemplate>
-          <Label text="{{ name }}" horizontalAlignment="left" class="fa" verticalAlignment="center"/>
+          <Label text="{{ icon + name }}" horizontalAlignment="left" class="fa" verticalAlignment="center"/>
         </ListView.itemTemplate>
       </ListView>
-      <Label text="{{ qLengthBanner }}" horizontalAlignment="left" class="bottom-banner" verticalAlignment="bottom"/>
     </GridLayout>
 </Page>
